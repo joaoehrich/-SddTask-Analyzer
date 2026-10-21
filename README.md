@@ -1,17 +1,28 @@
-# TaskAnalyzer - Módulo SDD
+# 🚀 SDD TaskAnalyzer
 
-Módulo analítico em Python para cálculo de métricas de produtividade, taxa de atraso e tempos médios de execução de tarefas.
+[![TaskAnalyzer CI Pipeline](https://github.com/joaoehrich/-SddTask-Analyzer/actions/workflows/ci.yml/badge.svg)](https://github.com/joaoehrich/-SddTask-Analyzer/actions)
 
-## Estrutura do Projeto
-- `src/`: Código-fonte da aplicação.
-- `tests/`: Suíte de testes automatizados (`pytest`).
-- `specs/`: Contrato SDD do projeto.
-- `CONTEXT_RULES.md`: Governança e regras de contexto para IA.
+O **TaskAnalyzer** é um módulo de alta performance desenvolvido para análise, agregação e validação de métricas de tarefas. O projeto foi construído utilizando a metodologia **Spec-Driven Development (SDD)**, com uma governança rigorosa focada no modelo **Critical-in-the-Loop**, containerização via Docker e automação CI/CD com GitHub Actions[cite: 1, 3, 4].
 
-## Como Executar
+---
 
-1. **Criar e ativar o ambiente virtual:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # Linux/macOS
-   # venv\Scripts\activate   # Windows
+## 📐 Arquitetura do Repositório
+
+```text
+sdd-task-analyzer/
+├── .github/
+│   └── workflows/
+│       └── ci.yml                 # Motor de CI/CD (GitHub Actions)
+├── specs/
+│   ├── system_design_document.pdf # Especificação do sistema (SDD)
+│   └── task_analyzer_spec.md      # Contrato executável e cenários de aceite
+├── src/
+│   ├── __init__.py
+│   └── task_analyzer.py           # Código homologado e otimizado
+├── tests/
+│   └── test_harness.py            # Suíte automatizada de testes com pytest
+├── CONTEXT_RULES.md               # Regras de contexto e restrições para IA
+├── Dockerfile                     # Empacotamento leve (python:3.11-slim)
+├── docker-compose.yml             # Orquestração isolada para testes locais
+├── requirements.txt               # Dependências do projeto (pytest)
+└── README.md                      # Documentação principal
