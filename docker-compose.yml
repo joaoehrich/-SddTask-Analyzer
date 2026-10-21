@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  sdd-task-analyzer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: task_analyzer_container
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - .:/app
+    command: pytest -v
